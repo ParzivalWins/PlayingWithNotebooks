@@ -5,3 +5,5 @@
 #Making changes in Dev
 =======
 ## Including Atlassian Jira integration
+
+Modified the build pipeline
