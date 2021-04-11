@@ -2,6 +2,11 @@ orbs:
   jira: circleci/jira@1.3.1
 version: 2.1
 jobs:
+  build:
+    docker:
+      - image: 'circleci/node:10'
+    steps:
+      - run: echo "hello"
   component-A:
     docker:
       - image: 'circleci/node:10'
@@ -34,6 +39,11 @@ jobs:
       - jira/notify
     working_directory: ~/repo
 workflows:
+  build:
+    jobs:
+      - build:
+          post-steps:
+            - jira/notify
   build-deploy:
     jobs:
       - component-A
