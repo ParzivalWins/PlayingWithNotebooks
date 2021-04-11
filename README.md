@@ -7,3 +7,5 @@
 ## Including Atlassian Jira integration
 
 Modified the build pipeline
+
+Added CircleCI
