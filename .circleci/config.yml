@@ -71,13 +71,3 @@ workflows:
                 job_type: deployment
           requires:
             - Verify
-            build:
-    docker:
-      - image: 'circleci/node:10'
-    steps:
-      - run: echo "hello"
-  build:
-    jobs:
-      - build:
-          post-steps:
-            - jira/notify
